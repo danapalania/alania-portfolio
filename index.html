@@ -292,6 +292,35 @@
         margin: 0;
         box-sizing: border-box;
     }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+
+    .box:hover .overlay {
+      opacity: 1;
+    }
+
+    .txt {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
     .waviy {
         position: relative;
@@ -405,12 +434,15 @@
         <div class="container">
             <div class="box">
                 <img src="wixsite.PNG">
+                <div class="overlay"> 
+                <div class="txt">Personal website created through Wix.com for Empowerment Technologies class (S.Y. 2021 - 2022)</div>
                 <span>Personal Site</span>
                 <script type="text/javascript">
                   $("img").click(function(){
                       window.open("https://danaalania.wixsite.com/alania-python");
                   })
-              </script>
+                </script>
+                </div>
             </div>
             <div class="box">
                 <img src="poster.gif">
